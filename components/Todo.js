@@ -44,7 +44,7 @@ class Todo {
         day: "numeric",
       })}`;
     } else {
-      this._todoDateEl.textContent = this._data.date;
+      this._todoDateEl.textContent = "";
     }
 
     this._generateCheckboxEl();
