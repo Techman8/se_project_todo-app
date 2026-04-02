@@ -8,13 +8,8 @@ import TodoCounter from "../components/TodoCounter.js";
 
 const addTodoButton = document.querySelector(".button_action_add");
 const addTodoPopupEl = document.querySelector("#add-todo-popup");
-const addTodoForm = addTodoPopup.getForm();
 const todosList = document.querySelector(".todos__list");
-
 const todoCounter = new TodoCounter(initialTodos, ".counter__text");
-
-const newTodoValidator = new FormValidator(validationConfig, addTodoForm);
-newTodoValidator.enableValidation();
 
 const section = new Section({
   items: initialTodos,
@@ -63,3 +58,7 @@ function generateTodo(data) {
 addTodoButton.addEventListener("click", () => {
   addTodoPopup.open();
 });
+
+const addTodoForm = addTodoPopup.getForm();
+const newTodoValidator = new FormValidator(validationConfig, addTodoForm);
+newTodoValidator.enableValidation();
