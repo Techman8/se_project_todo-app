@@ -2,7 +2,7 @@ class Todo {
   constructor(data, selector, handleCheck, handleDelete) {
     this._data = data;
     this._templateElement = document.querySelector(selector);
-    this._todoElement = this._templateElement.content.querySelector('.todo')
+    this._todoElement = this._templateElement.content.querySelector(".todo");
     this._todoNameEl = this._todoElement.querySelector(".todo__name");
     this._todoDateEl = this._todoElement.querySelector(".todo__date");
     this._todoCheckboxEl = this._todoElement.querySelector(".todo__completed");
@@ -30,16 +30,17 @@ class Todo {
   }
 
   getView() {
-  this._todoElement = this._templateElement.content.firstElementChild.cloneNode(true);
-  
-  this._todoNameEl = this._todoElement.querySelector(".todo__name");
-  this._todoDateEl = this._todoElement.querySelector(".todo__date");
-  this._todoCheckboxEl = this._todoElement.querySelector(".todo__completed");
-  this._todoLabel = this._todoElement.querySelector(".todo__label");
-  
+    this._todoElement =
+      this._templateElement.content.firstElementChild.cloneNode(true);
+
+    this._todoNameEl = this._todoElement.querySelector(".todo__name");
+    this._todoDateEl = this._todoElement.querySelector(".todo__date");
+    this._todoCheckboxEl = this._todoElement.querySelector(".todo__completed");
+    this._todoLabel = this._todoElement.querySelector(".todo__label");
+
     this._todoNameEl.textContent = this._data.name;
     this._todoDateEl.textContent = this._data.date;
-  
+
     const dueDate = new Date(this._data.date);
     if (!isNaN(dueDate)) {
       this._todoDateEl.textContent = `Due: ${dueDate.toLocaleString("en-US", {
