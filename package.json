@@ -1,0 +1,20 @@
+{
+  "name": "se_project_todo-app",
+  "version": "1.0.0",
+  "description": "Give a brief description of the project here. Feel free to give it a different name.",
+  "homepage": "https://github.com/Techman8/se_project_todo-app#readme",
+  "bugs": {
+    "url": "https://github.com/Techman8/se_project_todo-app/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Techman8/se_project_todo-app.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
